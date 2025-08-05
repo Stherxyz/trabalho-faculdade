@@ -1,127 +1,41 @@
-#include <stdio.h>
-#include <locale.h>
-
-int main(void) {
-
-    // Código para leitura de acentos
-    setlocale(LC_ALL, "Portuguese");
-
-    // Informações da Carta 1
-    char estadocarta1;
-    char codigocarta1[4];
-    char cidadecarta1[50];
-    int populacaocarta1;
-    int numeroA;
-    int numeroB;
-    int nptcarta1;
-    float area_carta1;
-    float pibcarta1;
-    float densidade_populacionalcarta1;
-    float media;
-    float pib_per_capta1;
-    float divisaoNumeros;
-    float calculos;
-
-
-    printf("Digite o estado da carta1:\n");
-    scanf("%c", &estadocarta1);
-    getchar();
-
-    printf("Digite o código da carta1:\n");
-    scanf("%s", codigocarta1);
-    getchar();
-
-    printf("Digite o nome da cidade da carta1:\n");
-    scanf("%[^\n]", cidadecarta1);
-    getchar();
-
-    printf("Digite a população da carta1:\n");
-    scanf("%d", &populacaocarta1);
-    getchar();
-
-    printf("Digite a área da carta1:\n");
-    scanf("%f", &area_carta1);
-    getchar();
-
-    printf("Digite o PIB da carta1:\n");
-    scanf("%f", &pibcarta1);
-    getchar();
-
-    printf("Digite o número de pontos turísticos da carta1:\n");
-    scanf("%d", &nptcarta1);
-    getchar();
-
-    densidade_populacionalcarta1 = (float)populacaocarta1 / area_carta1;
-    pib_per_capta1 = (float)pibcarta1 / populacaocarta1;
-
-
-
-    // Informações da Carta 2
-    char estadocarta2;
-    char codigocarta2[4];
-    char cidadecarta2[50];
-    int populacaocarta2;
-    float area_carta2;
-    float pibcarta2;
-    float densidade_populacionalcarta2;
-    float pib_per_capta2;
-    int nptcarta2;
-
-    printf("Digite o estado da carta2:\n");
-    scanf("%c", &estadocarta2);
-    getchar();
-
-    printf("Digite o código da carta2:\n");
-    scanf("%s", codigocarta2);
-    getchar();
-
-    printf("Digite o nome da cidade da carta2:\n");
-    scanf("%[^\n]", cidadecarta2);
-    getchar();
-
-    printf("Digite a população da carta2:\n");
-    scanf("%d", &populacaocarta2);
-    getchar();
-
-    printf("Digite a área da carta2:\n");
-    scanf("%f", &area_carta2);
-    getchar();
-
-    printf("Digite o PIB da carta2:\n");
-    scanf("%f", &pibcarta2);
-    getchar();
-
-    printf("Digite o número de pontos turísticos da carta2:\n");
-    scanf("%d", &nptcarta2);
-    getchar();
-
-    densidade_populacionalcarta2 = (float)populacaocarta2 / area_carta2;
-    pib_per_capta2 = (float)pibcarta2 / populacaocarta2;
-
-
-    // Impressão dos dados da Carta 1
-    printf("Informações carta 1:\n");
-    printf("Estado carta 1: %c\n", estadocarta1);
-    printf("Código carta 1: %s\n", codigocarta1);
-    printf("Cidade carta 1: %s\n", cidadecarta1);
-    printf("População carta 1: %d habitantes\n", populacaocarta1);
-    printf("Área carta 1: %.2f km²\n", area_carta1);
-    printf("PIB carta 1: %.2f bilhões de reais\n", pibcarta1);
-    printf("Número de pontos turísticos carta 1: %d\n", nptcarta1);
-    printf("Densidade populacional carta 1: %.2f \n", densidade_populacionalcarta1);
-    printf("PIB per Capita carta 1: %.2f \n", pib_per_capta1);
-
-    // Impressão dos dados da Carta 2
-    printf("Informações carta 2:\n");
-    printf("Estado carta 2: %c\n", estadocarta2);
-    printf("Código carta 2: %s\n", codigocarta2);
-    printf("Cidade carta 2: %s\n", cidadecarta2);
-    printf("População carta 2: %d habitantes\n", populacaocarta2);
-    printf("Área carta 2: %.2f km²\n", area_carta2);
-    printf("PIB carta 2: %.2f bilhões de reais\n", pibcarta2);
-    printf("Número de pontos turísticos carta 2: %d\n", nptcarta2);
-    printf("Densidade populacional carta 2: %.2f \n", densidade_populacionalcarta2);
-    printf("PIB per Capita carta 2: %.2f \n", pib_per_capta2);
-
-    return 0;
-}
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="trabalho" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/trabalho" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/trabalho" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
